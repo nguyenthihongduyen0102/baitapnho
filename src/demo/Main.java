@@ -20,8 +20,8 @@ public class Main {
                 800,
                 2
         );
-            dsKhoaHoc.add(th1);
             th1.setSoThangDK(-1);
+            dsKhoaHoc.add(th1);
         } catch(IllegalArgumentException e){
             System.out.println("Loi: " + e.getMessage());
         }
@@ -35,8 +35,8 @@ public class Main {
                 5,
                 200
         );
+            mt1.setSoBuoiMentor(10);
             dsKhoaHoc.add(mt1);
-            mt1.setSoBuoiMentor(0);
         } catch(IllegalArgumentException e){
             System.out.println("Loi: " + e.getMessage());
         }
@@ -50,8 +50,8 @@ public class Main {
                 12,
                 2
         );
+            dn2.setMucChietKhau(-1000);
             dsKhoaHoc.add(dn2);
-            dn2.setMucChietKhau(-1);
         } catch(IllegalArgumentException e){
             System.out.println("Loi: " + e.getMessage());
         }
@@ -59,15 +59,14 @@ public class Main {
         for(int i=0;i<dsKhoaHoc.size();i++){
             dsKhoaHoc.get(i).hienThi();
         }
-
-        Comparator<KhoaHoc> tonghocphi = new Comparator<KhoaHoc>() {
-            public int compare(KhoaHoc k1, KhoaHoc k2) {
-                return Double.compare(k1.tinhHocPhi(), k2.tinhHocPhi());
-            }
-        };
-
-        Collections.sort(dsKhoaHoc, tonghocphi);
         System.out.println("--------------------------------");
+        Collections.sort(dsKhoaHoc, new  Comparator<KhoaHoc>() {
+            public int compare(KhoaHoc o1, KhoaHoc o2) {
+                return Double.compare(
+                        o1.tinhHocPhi(),
+                        o2.tinhHocPhi());
+            }
+        });
         for(int i=0;i<dsKhoaHoc.size();i++){
             System.out.println(dsKhoaHoc.get(i).toString());
         }

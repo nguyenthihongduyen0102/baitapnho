@@ -32,7 +32,7 @@ public class KhoaHocDoanhNghiep extends KhoaHoc {
 
     public void setMucChietKhau(double mucChietKhau){
         if(mucChietKhau<0 || mucChietKhau>100){
-            throw new  IllegalArgumentException("Muc chiet khau khong hop le!!!");
+            throw new  IllegalArgumentException("Muc chiet khau phai 0-100");
         }
         this.mucChietKhau = mucChietKhau;
     }
