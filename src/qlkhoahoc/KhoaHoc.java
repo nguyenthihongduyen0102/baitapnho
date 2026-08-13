@@ -70,5 +70,5 @@ public abstract class KhoaHoc implements IKhoaHoc{
     public String toString() {
         return "[" + maKhoaHoc + "] " + tenKhoaHoc + " - Hoc Phi: " + tinhHocPhi() + " vnd." ;
     }
-    
+
 }
