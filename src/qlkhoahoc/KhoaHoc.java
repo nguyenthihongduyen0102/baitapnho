@@ -71,7 +71,4 @@ public abstract class KhoaHoc implements IKhoaHoc{
         return "[" + maKhoaHoc + "] " + tenKhoaHoc + " - Hoc Phi: " + tinhHocPhi() + " vnd." ;
     }
 
-//    public int compareTo(IKhoaHoc o) {
-//        return Double.compare(this.tinhHocPhi(), o.tinhHocPhi());
-//    }
 }
